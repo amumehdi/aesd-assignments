@@ -37,14 +37,14 @@ then
 	exit 1
 fi
 
-allfile=$( ls -R $filesdir | wc -w )
-echo all file is $allfile
+#set -x
+allfile=$( ls $filesdir | wc -w )
+#echo $(ls -R)
+#echo $(ls -R $filesdir)
+#echo $allfile
+
+#echo $allfile
 allhave=$( grep -r "$searchstr" $filesdir | wc -l )  
-echo all have is $allhave
-
+#set +x 
 echo The number of files are $allfile and the number of matching lines are $allhave
-
-
-
-
 
